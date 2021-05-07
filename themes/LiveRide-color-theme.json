@@ -86,6 +86,7 @@
 				"support.other.variable",
 				"string.other.link",
 				"variable.parameter",
+				"meta.function-call.arguments",
 				"meta.block variable.other",
 			],
 			"settings": {
