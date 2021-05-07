@@ -10,6 +10,9 @@
 		{
 			"name": "keywords",
 			"scope": [
+				"keyword.package",
+				"keyword.function",
+				"keyword.import",
 				"support.type.primitive",				
 				"constant.language.null",
 				"storage.type",
@@ -21,6 +24,7 @@
 				"keyword.other.template",
 				"keyword.other.special-method",
 				"keyword.other.substitution",
+				"support.type",
 			],
 			"settings": {
 				"foreground": "#6C95EB"
@@ -36,16 +40,28 @@
 				"punctuation.definition.tag.begin.html",
 				"punctuation.definition.tag.end.html",
 				"punctuation.section.embedded",
+				"variable.language.special",
 			],
 			"settings": {
 				"foreground": "#6C95EB"
 			}
 		},
 		{
+			"name": "Special keyword",
+			"scope": [
+				"support.function.magic"
+			],
+			"settings": {
+				"foreground": "#8967a7",
+				"fontStyle": "italic"
+			}
+		},
+		{
 			"name": "Comment",
 			"scope": [
 				"comment",
-				"punctuation.definition.comment"
+				"punctuation.definition.comment",
+				"string.quoted.docstring"
 			],
 			"settings": {
 				"fontStyle": "italic",
@@ -56,11 +72,25 @@
 			"name": "Variables",
 			"scope": [
 				"variable",
-				"string constant.other.placeholder"
+				"string constant.other.placeholder",
+				"entity.name.package"
 			],
 			"settings": {
 				"foreground": "#c691f5"
 			}
+		},
+		{
+			"name": "Plain text",
+			"scope": [
+				"punctuation.definition.arguments",
+				"support.other.variable",
+				"string.other.link",
+				"variable.parameter",
+				"meta.block variable.other",
+			],
+			"settings": {
+				"foreground": "#BDBDBD"
+			}	
 		},
 		{
 			"name": "Colors",
@@ -108,32 +138,11 @@
 				"entity.name.function",
 				"meta.function-call",
 				"variable.function",
-				"support.type",
 				"support.function",
 				"entity.name",
 			],
 			"settings": {
 				"foreground": "#39CC8F"
-			}
-		},
-		{
-			"name": "Block Level Variables",
-			"scope": [
-				"meta.block variable.other",
-			],
-			"settings": {
-				"foreground": "#BDBDBD"
-			}
-		},
-		{
-			"name": "Other Variable, String Link",
-			"scope": [
-				"support.other.variable",
-				"string.other.link",
-				"variable.parameter",
-			],
-			"settings": {
-				"foreground": "#BDBDBD"
 			}
 		},
 		{
@@ -154,6 +163,7 @@
 			"name": "String, Symbols, Inherited Class, Markup Heading",
 			"scope": [
 				"string",
+				"entity.name.import",
 				"constant.other.symbol",
 				"punctuation.definition.string",
 				"constant.other.key",
