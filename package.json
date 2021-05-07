@@ -1,0 +1,26 @@
+{
+    "name": "liveride-color-theme",
+    "displayName": "liveride",
+    "description": "idk don't ask me",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "publisher": "d-exclaimation",
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "LiveRide",
+                "uiTheme": "vs-dark",
+                "path": "./themes/LiveRide-color-theme.json"
+            }
+        ]
+    }
+}
