@@ -2,7 +2,7 @@
 
 LiveRider Color Theme is Rider-Insipired Color Theme from Jetbrains.
 
-![preview](images/liverider-preview.png)
+![preview](https://raw.githubusercontent.com/d-exclaimation/liveride-color-theme/main/images/liverider-preview.png)
 
 ## Installation
 
