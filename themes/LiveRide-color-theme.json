@@ -7,23 +7,31 @@
 		"sideBarTitle.foreground": "#bbbbbb"
 	},
 	"tokenColors": [
+		// Mark: Universal
+
+		// Mark: Reserved Word
 		{
+			// Name tokens that are reserved by the language i.e. declaration
 			"name": "keywords",
 			"scope": [
+				"keyword.type",
+				"keyword.struct",
 				"keyword.package",
 				"keyword.function",
 				"keyword.import",
+				"keyword.operator.bitwise",
+				"keyword.other",
+				"keyword.other.special-method",
+				"keyword.other.template",
+				"keyword.other.substitution",
+				"keyword.other.declaration-specifier",
 				"support.type.primitive",				
 				"constant.language.null",
 				"storage.type",
 				"entity.name.tag",
-				"keyword.operator.bitwise",
 				"keyword.control",
 				"constant.other.color",
 				"meta.tag",
-				"keyword.other.template",
-				"keyword.other.special-method",
-				"keyword.other.substitution",
 				"support.type",
 			],
 			"settings": {
@@ -31,8 +39,11 @@
 			}
 		},
 		{
+			// Universal operators i.e. comma, brackets
 			"name": "Punctuation tag, operators",
 			"scope": [
+				"storage.modifier",
+				"keyword.operator.new",
 				"punctuation",
 				"punctuation.definition.tag",
 				"punctuation.separator.inheritance.php",
@@ -46,10 +57,14 @@
 				"foreground": "#6C95EB"
 			}
 		},
+
+		// Mark: Special words etc
 		{
-			"name": "Special keyword",
+			// Specific tokens use internally by the language i.e. constructor, namespaces
+			"name": "Special keyword internal namespaces",
 			"scope": [
-				"support.function.magic"
+				"support.function.magic",
+				"variable.language"
 			],
 			"settings": {
 				"foreground": "#8967a7",
@@ -57,67 +72,14 @@
 			}
 		},
 		{
-			"name": "Comment",
-			"scope": [
-				"comment",
-				"comment.line",
-				"punctuation.definition.comment",
-				"string.quoted.docstring"
-			],
-			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#5a6469"
-			}
-		},
-		{
-			"name": "Variables",
+			// Class, Struct, Namespace, Module 
+			"name": "Big Words",
 			"scope": [
 				"variable",
 				"string constant.other.placeholder",
-				"entity.name.package"
-			],
-			"settings": {
-				"foreground": "#c691f5"
-			}
-		},
-		{
-			"name": "Plain text",
-			"scope": [
-				"punctuation.definition.arguments",
-				"support.other.variable",
-				"string.other.link",
-				"variable.parameter",
-				"meta.function-call.arguments",
-				"meta.block variable.other",
-			],
-			"settings": {
-				"foreground": "#BDBDBD"
-			}	
-		},
-		{
-			"name": "Colors",
-			"scope": [
-				"constant.other.color"
-			],
-			"settings": {
-				"foreground": "#ffffff83"
-			}
-		},
-		{
-			"name": "Invalid",
-			"scope": [
-				"invalid",
-				"invalid.illegal"
-			],
-			"settings": {
-				"foreground": "#FF5370"
-			}
-		},
-		{
-			"name": "Keyword, Storage",
-			"scope": [
+				"entity.name.package",
 				"keyword",
-				"storage.modifier",
+				"support.type",
 				"punctuation.definition.variable"
 			],
 			"settings": {
@@ -125,60 +87,7 @@
 			}
 		},
 		{
-			"name": "Tag",
-			"scope": [
-				"meta.tag.sgml",
-				"markup.deleted.git_gutter"
-			],
-			"settings": {
-				"foreground": "#706070"
-			}
-		},
-		{
-			"name": "Function, Special Method",
-			"scope": [
-				"entity.name.function",
-				"meta.function-call",
-				"variable.function",
-				"support.function",
-				"entity.name",
-			],
-			"settings": {
-				"foreground": "#39CC8F"
-			}
-		},
-		{
-			"name": "Number, Constant, Function Argument, Tag Attribute, Embedded",
-			"scope": [
-				"constant.numeric",
-				"support.constant",
-				"constant.character",
-				"constant.escape",
-				"keyword.other.unit",
-				"keyword.other"
-			],
-			"settings": {
-				"foreground": "#ED94C0"
-			}
-		},
-		{
-			"name": "String, Symbols, Inherited Class, Markup Heading",
-			"scope": [
-				"string",
-				"entity.name.import",
-				"constant.other.symbol",
-				"punctuation.definition.string",
-				"constant.other.key",
-				"entity.other.inherited-class",
-				"markup.heading",
-				"markup.inserted.git_gutter",
-				"meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
-			],
-			"settings": {
-				"foreground": "#C9A26D"
-			}
-		},
-		{
+			// Class, Object Module, Support
 			"name": "Class, Support",
 			"scope": [
 				"entity.name.type",
@@ -194,15 +103,150 @@
 			}
 		},
 		{
-			"name": "Entity Types",
+			"name": "Atom, Identifiers, Attribute, Properties",
 			"scope": [
-				"support.type"
+				"variable.object.property",
+				"constant.language",
+				"entity.other.attribute-name"
 			],
 			"settings": {
-				"foreground": "#c691f5"
+				"fontStyle": "italic",
+				"foreground": "#66C3CC",
+			}
+		},
+
+		// Mark: Function and Alike
+		{
+			// Function. Methods calls
+			"name": "Function, Special Method",
+			"scope": [
+				"entity.name.function",
+				"meta.function-call.generic",
+				"variable.function",
+				"support.function",
+				"entity.name",
+			],
+			"settings": {
+				"foreground": "#39CC8F"
 			}
 		},
 		{
+			"name": "Decorators",
+			"scope": [
+				"keyword.interface",
+				"tag.decorator entity.name.tag",
+				"tag.decorator punctuation.definition.tag"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#82AAFF"
+			}
+		},
+
+		// Mark: Documetation
+		{
+			// Comment, docstring
+			"name": "Comment",
+			"scope": [
+				"comment",
+				"comment.line",
+				"punctuation.definition.comment",
+				"string.quoted.docstring"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#5a6469"
+			}
+		},
+
+		// Mark: Plain text or scoped tokens
+		{
+			// Scoped variables, and plain text
+			"name": "Plain text",
+			"scope": [
+				"variable.other.assignment",
+				"punctuation.definition.arguments",
+				"support.other.variable",
+				"string.other.link",
+				"variable.parameter",
+				"meta.function-call",
+				"meta.function-call.arguments",
+				"meta.block variable.other",
+			],
+			"settings": {
+				"foreground": "#BDBDBD"
+			}	
+		},
+		{
+			// Constant
+			"name": "Constant Color",
+			"scope": [
+				"constant.other.color"
+			],
+			"settings": {
+				"foreground": "#ffffff83"
+			}
+		},
+		{
+			// Invalid Color
+			"name": "Invalid",
+			"scope": [
+				"invalid",
+				"invalid.illegal"
+			],
+			"settings": {
+				"foreground": "#FF5370"
+			}
+		},
+		{
+			// Tag color
+			"name": "Tag",
+			"scope": [
+				"meta.tag.sgml",
+				"markup.deleted.git_gutter"
+			],
+			"settings": {
+				"foreground": "#706070"
+			}
+		},
+
+		// Mark: Literals
+		{
+			// Numeric Literals
+			"name": "Number, Constant, Embedded",
+			"scope": [
+				"constant.numeric",
+				"support.constant",
+				"constant.character",
+				"constant.escape",
+				"keyword.other.unit",
+			],
+			"settings": {
+				"foreground": "#ED94C0"
+			}
+		},
+		{
+			// String and Characters
+			"name": "String, Symbols",
+			"scope": [
+				"string",
+				"entity.name.import",
+				"constant.other.symbol",
+				"punctuation.definition.string",
+				"constant.other.key",
+				"entity.other.inherited-class",
+				"markup.heading",
+				"markup.inserted.git_gutter",
+				"meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
+			],
+			"settings": {
+				"foreground": "#C9A26D"
+			}
+		},
+
+		// Mark: HTML and CSS Tokens
+		{
+			// CSS Class Namespace (Matched regular class name)
 			"name": "CSS Class and Support",
 			"scope": [
 				"source.css support.type.property-name",
@@ -217,47 +261,7 @@
 			}
 		},
 		{
-			"name": "Sub-methods",
-			"scope": [
-				"entity.name.module.js",
-				"variable.import.parameter.js",
-				"variable.other.class.js"
-			],
-			"settings": {
-				"foreground": "#FF5370"
-			}
-		},
-		{
-			"name": "Language methods",
-			"scope": [
-				"variable.language"
-			],
-			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#BDBDBD"
-			}
-		},
-		{
-			"name": "entity.name.method.js",
-			"scope": [
-				"entity.name.method.js"
-			],
-			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#82AAFF"
-			}
-		},
-		{
-			"name": "meta.method.js",
-			"scope": [
-				"meta.class-method.js entity.name.function.js",
-				"variable.function.constructor"
-			],
-			"settings": {
-				"foreground": "#82AAFF"
-			}
-		},
-		{
+			// Basic HTML Attributes
 			"name": "HTML Attributes",
 			"scope": [
 				"text.html.basic entity.other.attribute-name.html",
@@ -269,7 +273,8 @@
 			}
 		},
 		{
-			"name": "CSS Classes",
+			// CSS Atribute name
+			"name": "CSS Attribute",
 			"scope": [
 				"entity.other.attribute-name.class"
 			],
@@ -278,6 +283,7 @@
 			}
 		},
 		{
+			// CSS ID's
 			"name": "CSS ID's",
 			"scope": [
 				"source.sass keyword.control"
@@ -286,6 +292,34 @@
 				"foreground": "#82AAFF"
 			}
 		},
+
+		// Mark: Javascript Special Tokens
+		{
+			// Javascript entity and meta name
+			"name": "entity.name.method.js",
+			"scope": [
+				"entity.name.method.js",
+				"meta.class-method.js entity.name.function.js",
+				"variable.function.constructor",
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#82AAFF"
+			}
+		},
+		{
+			"name": "ES7 Bind Operator",
+			"scope": [
+				"source.js constant.other.object.key.js string.unquoted.label.js"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#FF5370"
+			}
+		},
+		
+		
+		// Mark: Version Control
 		{
 			"name": "Inserted",
 			"scope": [
@@ -313,6 +347,8 @@
 				"foreground": "#C792EA"
 			}
 		},
+
+		// Mark: Unicode and String 
 		{
 			"name": "Regular Expressions",
 			"scope": [
@@ -342,27 +378,8 @@
 				"fontStyle": "underline"
 			}
 		},
-		{
-			"name": "Decorators",
-			"scope": [
-				"tag.decorator.js entity.name.tag.js",
-				"tag.decorator.js punctuation.definition.tag.js"
-			],
-			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#82AAFF"
-			}
-		},
-		{
-			"name": "ES7 Bind Operator",
-			"scope": [
-				"source.js constant.other.object.key.js string.unquoted.label.js"
-			],
-			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#FF5370"
-			}
-		},
+
+		// Mark: JSON and Config Files
 		{
 			"name": "JSON Key - Level 0",
 			"scope": [
@@ -444,6 +461,8 @@
 				"foreground": "#6C95EB"
 			}
 		},
+
+		// Mark: Markdown
 		{
 			"name": "Markdown - Plain",
 			"scope": [
@@ -649,17 +668,6 @@
 				"foreground": "#4997E6",
 			}
 		},
-		{
-			"name": "Atom, Identifiers, Attribute, Properties",
-			"scope": [
-				"variable.object.property",
-				"constant.language",
-				"entity.other.attribute-name"
-			],
-			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#66C3CC",
-			}
-		}
+
 	]
 }
