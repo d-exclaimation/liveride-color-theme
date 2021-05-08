@@ -2,7 +2,7 @@
     "name": "liveride-color-theme",
     "displayName": "LiveRider",
     "description": "idk don't ask me",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "icon": "images/liverider-icon.png",
     "repository": {
         "type": "git",
