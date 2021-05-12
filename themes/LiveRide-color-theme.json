@@ -169,6 +169,7 @@
 				"support.other.variable",
 				"string.other.link",
 				"variable.parameter",
+				"meta.jsx",
 				"meta.function-call",
 				"meta.function-call.arguments",
 				"meta.block variable.other",
