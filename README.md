@@ -16,12 +16,13 @@ LiveRider Color Theme is Rider-Insipired Color Theme from Jetbrains.
 
 ## Features
 
-LiveRider provide a better more colorful yet controlled/tamed color scheme with a theme of blue, green and pink inspired by Jetbrains Rider to help you focus on the code and not get distraced by too flashy color differences.
+LiveRider provide a better more colorful yet controlled/tamed color scheme with a theme of blue, green and pink inspired by Jetbrains Rider to help you focus on the code and not get distraced by flashy color differences.
 
-- Rich in color (by rich I meant I slapped blue, green, and pink-purple everything)
-- Less white, operators, keywords are not plain text
+- Rich in color (I think)
+- Tokens are colored so that it is as easy to differentiate as I can make it to be
+- Less usage of white if possible i.e. operators.
 - Does not change the default VSCode background color
-- Does not hurt your eyes with too bright or too much constrast colors
+- Does not hurt your eyes (Not too bright, not too high of constrast)
 - Works for languages such as Typescript, Javascript, Elixir, Go and Python
 
 ## Language support
@@ -32,20 +33,24 @@ LiveRider provide a better more colorful yet controlled/tamed color scheme with 
 - Elixir
 - Go
 - Python
+- Swift (This just happen to work)
 
 ... more coming soon, maybe.
 
 ## Why this exist?
 
-There aren't many people who uses Rider Theme especially in vscode which make sense, but I like it so I am going to make an extension.
+TLDR:
+- A lot of color schemes are way too bright
+- A lot of color schemes use very high contrast, too much for me
+- The color choice is a bit distracting
+- Rider Color Theme is awesome
+- A lot of color schemes do not work so well with Go, Elixir, React
 
-There is a Rider Extension already but, I don't like the color option especially when working with React, Go and Elixir Files
-Obviously, I could have gone with any other theme but come on. I don't personally like having many tokens colored like plain text
-as it is hard o read and scan through.
+I like color schemes that isn't too high contrast, while still is colorful. I personally find a lot of color choices to be too distracting or to plain, and sometimes even both all at the same time. Changing the background theme is fine, but I like it as it is. 
 
-`dark-plus-syntax`, is actually my goto but although I don't hate the default color scheme, I prefer Rider's.
+I also notice that for languages I often use does not look well with most color schemes, usually due to the way tokens are group together or just because it's not aimed at that language. All of this give me some reason to create my own and also at the time, I think why not, lol. I tried my best to make tokens easy to visibly differentiate, not by adding colors, but to alternate between ones that already look great. 
 
-Thus, here we are
+There is a Rider Theme already, but it have a different set of languages supported, so I think I can offer something different. I still recommend using/checking that one for languages not supported by this extensions i.e. C#, C++, etc.
 
 Obviously, this will never even exised if Jetbrains never created the Rider theme, so credit where credit is due. Thanks Jetbrains and Thanks VSCode for allowing me to publish this extension.
 
