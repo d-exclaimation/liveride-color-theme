@@ -9,11 +9,13 @@
 	"tokenColors": [
 		// Mark: Universal
 
-		// Mark: Reserved Word
+		// Mark: Reserved Word 
 		{
 			// Name tokens that are reserved by the language i.e. declaration
 			"name": "keywords",
 			"scope": [
+				"keyword.var",
+				"keyword.declaration",
 				"keyword.type",
 				"keyword.struct",
 				"keyword.package",
@@ -90,6 +92,7 @@
 			// Class, Object Module, Support
 			"name": "Class, Support",
 			"scope": [
+				"entity.name.class",
 				"entity.name.type",
 				"support.constant.math",
 				"support.class",
@@ -164,6 +167,7 @@
 			// Scoped variables, and plain text
 			"name": "Plain text",
 			"scope": [
+				"variable.other.declaration",
 				"variable.other.assignment",
 				"punctuation.definition.arguments",
 				"support.other.variable",

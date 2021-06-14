@@ -2,11 +2,11 @@
 
 All notable changes to the "liveride-color-theme" extension will be documented in this file.
 
-## [0.1.0]
+## [0.1]
 
 Features:
 
-- Working theme for Swift, Go, Python, Javascript, Typescript
+- Working theme for Swift, Go, Python, Javascript, Typescript, Elixir
 - Updated README
 
 Bug Fixes:
